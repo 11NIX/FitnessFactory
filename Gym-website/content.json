@@ -1,5 +1,107 @@
 {
   "gym_name": "The Fitness Factory @Northwood",
+  "hero": {
+    "subtitle": "Northwood School, Durban North",
+    "heading_line1": "NO FRILLS.",
+    "heading_line2": "NO CONTRACT.",
+    "heading_line3": "ALL RESULTS.",
+    "description": "A fully equipped gym, functional training and a rock climbing wall, run by trainers who coach some of South Africa's top athletes.",
+    "cta1_text": "Claim Free Trial",
+    "cta2_text": "Explore Classes"
+  },
+  "about": {
+    "heading": "WELCOME TO THE FITNESS FACTORY",
+    "body": [
+      "Looking for a gym that’s right for you? We don’t offer free WIFI, retro aerobics, or fancy hair straighteners. We don’t advertise saunas and tanning beds. But what we do offer is a fully equipped gym, functional training, rock climbing wall, an awesome friendly vibe and absolutely zero pretentiousness and judgment!",
+      "The Fitness Factory @Northwood is a privately owned and run gym based at Northwood School in Durban North.",
+      "We are dedicated to providing our members with the finest level of service in the fitness community. We put an emphasis on top-level fitness and a healthy lifestyle! Not only do we pride ourselves in training and rehabilitating some of South Africa’s top sportsmen and women, but we have a facility suitable for all fitness levels and aim to help everyone reach their personal fitness goals.",
+      "The gym is 250 square metre fully equipped facility, which is manned by staff members from opening at 5am until closing at 8:00pm every weekday, and from 6am till 12:00 on Saturdays. We are not open on Sundays… you earned the rest! Any of our trainers will help you with any issues or questions you might have.",
+      "In short… Whether you are a professional sports person or you just want to have fun and be healthy, our facility is perfect for you! No frills, no bells and whistles and false promises, just good old fashioned fitness!",
+      "Last but not least, we have NO CONTRACT, and NO JOINING FEE!!"
+    ]
+  },
+  "underberg": {
+    "heading": "THE FITNESS FACTORY IS NOW ALSO IN UNDERBERG!!",
+    "description": "Click below for more info about our Underberg location.",
+    "button_text": "Click HERE for more info…",
+    "button_link": "#contact"
+  },
+  "fees": {
+    "heading": "Fees & Sign Up",
+    "subheading": "No contract. No joining fee.",
+    "note": "Classes are not included in gym membership - group classes have separate rates per trainer.",
+    "membership_form_link": "https://www.thefitnessfactory.co.za/wp-content/uploads/2026/10/the-fitness-factory-membership-form.pdf",
+    "membership_form_text": "Download Membership Form",
+    "plans": [
+      {
+        "name": "Basic",
+        "monthly": 450,
+        "annual": 4500,
+        "features": ["Gym Access", "All Equipment"]
+      },
+      {
+        "name": "Pro",
+        "monthly": 650,
+        "annual": 6500,
+        "features": ["Gym Access", "All Equipment", "Priority Access", "Great Value"],
+        "featured": true
+      },
+      {
+        "name": "Elite",
+        "monthly": 1200,
+        "annual": 12000,
+        "features": ["Gym Access", "All Equipment", "All Classes Discount", "Personal Training Credits"]
+      }
+    ]
+  },
+  "classes": {
+    "heading": "GROUP CLASSES",
+    "intro": "Are you someone who battles with motivation & training on your own, have no idea what you’re doing in the gym, and need the guidance from a trainer in a small group class?? Then this is for YOU!!",
+    "note": "The gym doesn’t have classes as part of the gym membership, however our trainers all have their own group classes which are also different rates according to each trainer. You don’t have to be a gym member to join the classes, but if you’d like to train on your own on the other days then you’ll need to become a member.",
+    "durban_north_pdf": "http://www.thefitnessfactory.co.za/wp-content/uploads/2025/12/GROUP-CLASSES-THE-FITNESS-FACTORY.pdf",
+    "durban_north_text": "DURBAN NORTH GROUP CLASSES",
+    "underberg_pdf": "http://www.thefitnessfactory.co.za/wp-content/uploads/2025/12/GROUP-CLASSES-2026.pdf",
+    "underberg_text": "UNDERBERG GROUP CLASSES",
+    "indemnity_link": "http://www.thefitnessfactory.co.za/wp-content/uploads/2023/06/The-Fitness-Factory-Client-Information.pdf",
+    "indemnity_text": "CLICK HERE for Underberg Client Indemnity Form"
+  },
+  "gallery": {
+    "heading": "GALLERY",
+    "images": [
+      {
+        "url": "https://www.thefitnessfactory.co.za/wp-content/uploads/2019/02/19554389_1447031148688486_1221180450949562331_n-3-300x200.jpg",
+        "alt": "Gym equipment"
+      },
+      {
+        "url": "https://www.thefitnessfactory.co.za/wp-content/uploads/2019/02/19430057_1447031522021782_4553457836492334842_n-300x200.jpg",
+        "alt": "Gym floor"
+      },
+      {
+        "url": "https://www.thefitnessfactory.co.za/wp-content/uploads/2023/03/Gym-pic-2.jpg",
+        "alt": "Gym training"
+      },
+      {
+        "url": "http://www.thefitnessfactory.co.za/wp-content/uploads/2023/06/338140652_1493696734370546_6634003022925602906_n-1024x576.jpg",
+        "alt": "Gym facility"
+      }
+    ]
+  },
+  "contact": {
+    "heading": "CONTACT US",
+    "northwood_address": "Northwood School\n140 Adelaide Tambo Drive,\nDurban North 4051",
+    "underberg_address": "9 Old Main Road, Underberg, R617",
+    "phone": "+27 84 420 8230",
+    "email": "info@thefitnessfactory.co.za",
+    "facebook": "https://www.facebook.com/thefitnessfactorynorthwood",
+    "instagram": "https://www.instagram.com/thefitnessfactorydbn/",
+    "hours": [
+      {"days": "Monday – Thursday’s:", "time": "5am – 8pm"},
+      {"days": "Friday’s:", "time": "5am – 7pm"},
+      {"days": "Saturday’s:", "time": "6am – 12 noon"},
+      {"days": "Sunday’s:", "time": "Closed"},
+      {"days": "Public Holiday’s:", "time": "6am – 12 noon"}
+    ]
+  },
   "trainers": [
     { "name": "Simon Vickers", "role": "Co-owner and trainer", "tags": ["Strength", "Coaching"], "c": "#C6FF3D" },
     { "name": "Richard Tyler", "role": "Co-owner, Athletic Performance Consultant", "tags": ["Performance", "Athletes"], "c": "#9BE15D" },

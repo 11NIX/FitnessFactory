@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Fitness Factory @Northwood | Train hard in Durban North</title>
-<meta name="description" content="Fully equipped gym at Northwood School, Durban North. Functional training, rock climbing wall, expert trainers. No contract, no joining fee. Book a free pass.">
+<meta name="description" content="Fully equipped gym at Northwood School, Durban North. Functional training, rock climbing wall, expert trainers. No contract, no joining fee.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23C6FF3D%22/><path d=%22M25 70h50M35 70V50M50 70V30M65 70V42%22 stroke=%22%230A0A0B%22 stroke-width=%228%22 stroke-linecap=%22round%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 <script>
-tailwind.config = { theme: { extend: {
-  colors: { void: '#0A0A0B', coal: '#131417', slate2: '#1C1E23', lime: '#C6FF3D', mist: '#A3A9B5' },
-  fontFamily: { head: ['Montserrat','sans-serif'], body: ['Inter','system-ui','sans-serif'] }
-}}}
+  tailwind.config = { theme: { extend: {
+    colors: { void: '#0A0A0B', coal: '#131417', slate2: '#1C1E23', lime: '#C6FF3D', mist: '#A3A9B5' },
+    fontFamily: { head: ['Montserrat','sans-serif'], body: ['Inter','system-ui','sans-serif'] }
+  }}}
 </script>
 <style>
   body { font-family: 'Inter', system-ui, sans-serif; }
@@ -37,14 +37,17 @@ tailwind.config = { theme: { extend: {
   <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 h-16" aria-label="Main">
     <a href="#top" class="head font-black text-lg flex items-center gap-2">
       <span class="w-8 h-8 rounded-lg bg-lime grid place-items-center" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A0A0B" stroke-width="3" stroke-linecap="round"><path d="M4 20h16M7 20v-6M12 20V6M17 20v-9"/></svg></span>
-      FITNESS FACTORY
+      <span id="navGymName">FITNESS FACTORY</span>
     </a>
-    <ul class="hidden lg:flex items-center gap-7 text-sm font-medium text-mist">
-      <li><a class="hover:text-lime transition-colors" href="#classes">Classes</a></li>
-      <li><a class="hover:text-lime transition-colors" href="#schedule">Schedule</a></li>
-      <li><a class="hover:text-lime transition-colors" href="#trainers">Trainers</a></li>
-      <li><a class="hover:text-lime transition-colors" href="#pricing">Pricing</a></li>
+    <ul class="hidden lg:flex items-center gap-6 text-sm font-medium text-mist">
       <li><a class="hover:text-lime transition-colors" href="#about">About</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#underberg">Underberg</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#fees">Fees/Sign Up</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#classes">Group Classes</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#gallery">Gallery</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#trainers">Trainers</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#schedule">Schedule</a></li>
+      <li><a class="hover:text-lime transition-colors" href="#contact">Contact</a></li>
       <li><a href="#join" class="bg-lime text-void font-bold px-5 py-2.5 rounded-full hover:shadow-[0_0_24px_rgba(198,255,61,.5)] transition-shadow">Book Free Pass</a></li>
     </ul>
     <button id="menuBtn" class="lg:hidden p-2 -mr-2" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -53,7 +56,14 @@ tailwind.config = { theme: { extend: {
   </nav>
   <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 px-5 py-4">
     <ul class="flex flex-col gap-4 font-medium">
-      <li><a href="#classes">Classes</a></li><li><a href="#schedule">Schedule</a></li><li><a href="#trainers">Trainers</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#underberg">Underberg</a></li>
+      <li><a href="#fees">Fees/Sign Up</a></li>
+      <li><a href="#classes">Group Classes</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#contact">Contact</a></li>
       <li><a href="#join" class="inline-block bg-lime text-void font-bold px-5 py-2.5 rounded-full">Book Free Pass</a></li>
     </ul>
   </div>
@@ -67,39 +77,111 @@ tailwind.config = { theme: { extend: {
   <div class="absolute -top-32 -right-32 w-[34rem] h-[34rem] rounded-full bg-lime/20 blur-[120px]" aria-hidden="true"></div>
   <div class="absolute bottom-0 -left-32 w-[26rem] h-[26rem] rounded-full bg-lime/10 blur-[120px]" aria-hidden="true"></div>
   <div class="relative max-w-6xl mx-auto px-5 w-full">
-    <p class="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-sm text-mist"><span class="w-2 h-2 rounded-full bg-lime"></span> Northwood School, Durban North</p>
-    <h1 class="mt-6 text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.95] max-w-4xl">NO FRILLS.<br>NO CONTRACT.<br><span class="text-lime">ALL RESULTS.</span></h1>
-    <p class="mt-6 text-lg sm:text-xl text-mist max-w-xl">A fully equipped gym, functional training and a rock climbing wall, run by trainers who coach some of South Africa's top athletes.</p>
+    <p class="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-sm text-mist"><span class="w-2 h-2 rounded-full bg-lime"></span> <span id="heroSubtitle">Northwood School, Durban North</span></p>
+    <h1 class="mt-6 text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.95] max-w-4xl">
+      <span id="heroLine1">NO FRILLS.</span><br>
+      <span id="heroLine2">NO CONTRACT.</span><br>
+      <span id="heroLine3" class="text-lime">ALL RESULTS.</span>
+    </h1>
+    <p id="heroDesc" class="mt-6 text-lg sm:text-xl text-mist max-w-xl">A fully equipped gym, functional training and a rock climbing wall, run by trainers who coach some of South Africa's top athletes.</p>
     <div class="mt-9 flex flex-wrap gap-3">
-      <a href="#join" class="bg-lime text-void font-bold px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(198,255,61,.55)] transition-shadow">Claim Free Trial</a>
-      <a href="#classes" class="glass font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-colors">Explore Classes</a>
+      <a id="heroCta1" href="#join" class="bg-lime text-void font-bold px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(198,255,61,.55)] transition-shadow">Claim Free Trial</a>
+      <a id="heroCta2" href="#classes" class="glass font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-colors">Explore Classes</a>
     </div>
   </div>
 </section>
 
-<!-- CLASSES -->
-<section id="classes" class="max-w-6xl mx-auto px-5 py-24">
-  <div class="reveal max-w-2xl">
-    <h2 class="text-4xl md:text-5xl font-black">Train the way you want</h2>
-    <p class="mt-4 text-mist text-lg">Four ways to work, all under one roof.</p>
+<!-- ABOUT -->
+<section id="about" class="max-w-6xl mx-auto px-5 py-24">
+  <div class="reveal max-w-3xl">
+    <h2 id="aboutHeading" class="text-4xl md:text-5xl font-black">WELCOME TO THE FITNESS FACTORY</h2>
+    <div id="aboutBody" class="mt-6 space-y-4 text-mist text-lg leading-relaxed">
+      <!-- populated by JS -->
+    </div>
   </div>
-  <div class="mt-12 grid sm:grid-cols-2 gap-5">
-    <article class="card reveal relative overflow-hidden rounded-3xl bg-coal aspect-[16/10] p-6 flex flex-col justify-end">
-      <h3 class="text-2xl font-extrabold">Strength &amp; Conditioning</h3>
-      <p class="mt-1 text-mist text-sm">Fully equipped floor with racks, free weights and machines.</p>
-    </article>
-    <article class="card reveal relative overflow-hidden rounded-3xl bg-coal aspect-[16/10] p-6 flex flex-col justify-end">
-      <h3 class="text-2xl font-extrabold">Functional Training</h3>
-      <p class="mt-1 text-mist text-sm">Movement-based sessions that build everyday power.</p>
-    </article>
+</section>
+
+<!-- UNDERBERG -->
+<section id="underberg" class="bg-coal py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="reveal glass rounded-3xl p-8 md:p-12 text-center">
+      <img src="http://www.thefitnessfactory.co.za/wp-content/uploads/2023/06/338140652_1493696734370546_6634003022925602906_n-1024x576.jpg" alt="The Fitness Factory Underberg" class="w-full max-w-3xl mx-auto rounded-2xl mb-8">
+      <h2 id="underbergHeading" class="text-3xl md:text-4xl font-black">THE FITNESS FACTORY IS NOW ALSO IN UNDERBERG!!</h2>
+      <p id="underbergDesc" class="mt-4 text-mist text-lg max-w-2xl mx-auto">Click below for more info about our Underberg location.</p>
+      <a id="underbergBtn" href="#contact" class="inline-block mt-8 bg-lime text-void font-bold px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(198,255,61,.55)] transition-shadow">Click HERE for more info…</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEES/SIGN UP -->
+<section id="fees" class="max-w-6xl mx-auto px-5 py-24">
+  <div class="reveal text-center max-w-2xl mx-auto">
+    <h2 id="feesHeading" class="text-4xl md:text-5xl font-black">Fees & Sign Up</h2>
+    <p id="feesSubheading" class="mt-4 text-mist text-lg">No contract. No joining fee.</p>
+    <p id="feesNote" class="mt-2 text-mist">Classes are not included in gym membership - group classes have separate rates per trainer.</p>
+    <div class="mt-8">
+      <a id="feesFormLink" href="#" target="_blank" class="inline-block bg-lime text-void font-bold px-8 py-4 rounded-full hover:shadow-[0_0_30px_rgba(198,255,61,.55)] transition-shadow">Download Membership Form</a>
+    </div>
+    <div class="mt-8 inline-flex glass rounded-full p-1" role="group" aria-label="Billing period">
+      <button id="mBtn" class="px-6 py-2 rounded-full font-bold bg-lime text-void" aria-pressed="true">Monthly</button>
+      <button id="aBtn" class="px-6 py-2 rounded-full font-bold text-mist" aria-pressed="false">Annual</button>
+    </div>
+  </div>
+  <div id="pricingGrid" class="mt-12 grid md:grid-cols-3 gap-6 items-stretch">
+    <!-- populated by JS -->
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes" class="bg-coal py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="reveal max-w-3xl">
+      <h2 id="classesHeading" class="text-4xl md:text-5xl font-black">GROUP CLASSES</h2>
+      <p id="classesIntro" class="mt-4 text-mist text-lg leading-relaxed">Are you someone who battles with motivation & training on your own...</p>
+      <p id="classesNote" class="mt-4 text-mist leading-relaxed">The gym doesn’t have classes as part of the gym membership...</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="reveal glass rounded-3xl p-8">
+        <h3 class="text-2xl font-extrabold mb-6">Timetables</h3>
+        <div class="space-y-4">
+          <a id="dnorthPdf" href="#" target="_blank" class="block w-full text-center bg-lime text-void font-bold py-3.5 rounded-full hover:shadow-[0_0_30px_rgba(198,255,61,.55)] transition-shadow">DURBAN NORTH GROUP CLASSES</a>
+          <a id="underbergPdf" href="#" target="_blank" class="block w-full text-center glass font-bold py-3.5 rounded-full hover:bg-white/10 transition-colors">UNDERBERG GROUP CLASSES</a>
+        </div>
+      </div>
+      <div class="reveal glass rounded-3xl p-8">
+        <h3 class="text-2xl font-extrabold mb-4">Forms</h3>
+        <p class="text-mist mb-6">Please fill out and bring the indemnity form if joining classes.</p>
+        <a id="indemnityLink" href="#" target="_blank" class="inline-block bg-lime text-void font-bold px-6 py-3 rounded-full hover:shadow-[0_0_30px_rgba(198,255,61,.55)] transition-shadow">CLICK HERE for Underberg Client Indemnity Form</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="max-w-6xl mx-auto px-5 py-24">
+  <div class="reveal max-w-2xl">
+    <h2 id="galleryHeading" class="text-4xl md:text-5xl font-black">GALLERY</h2>
+    <p class="mt-4 text-mist text-lg">A glimpse inside The Fitness Factory.</p>
+  </div>
+  <div id="galleryGrid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <!-- populated by JS -->
+  </div>
+</section>
+
+<!-- TRAINERS -->
+<section id="trainers" class="bg-coal py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="reveal max-w-2xl"><h2 class="text-4xl md:text-5xl font-black">Meet the team</h2></div>
+    <ul id="trainerGrid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></ul>
   </div>
 </section>
 
 <!-- SCHEDULE -->
-<section id="schedule" class="bg-coal py-24">
+<section id="schedule" class="max-w-6xl mx-auto px-5 py-24">
   <div class="max-w-6xl mx-auto px-5">
     <div class="reveal max-w-2xl">
       <h2 class="text-4xl md:text-5xl font-black">Weekly schedule</h2>
+      <p class="mt-4 text-mist text-lg">Northwood classes & sessions</p>
     </div>
     <div class="mt-8 flex flex-wrap gap-3 items-end">
       <div role="group" aria-label="Filter by day" id="dayFilter" class="flex flex-wrap gap-2"></div>
@@ -111,44 +193,50 @@ tailwind.config = { theme: { extend: {
   </div>
 </section>
 
-<!-- TRAINERS -->
-<section id="trainers" class="max-w-6xl mx-auto px-5 py-24">
-  <div class="reveal max-w-2xl"><h2 class="text-4xl md:text-5xl font-black">Meet the team</h2></div>
-  <ul id="trainerGrid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></ul>
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="bg-coal py-24">
+<!-- CONTACT -->
+<section id="contact" class="bg-coal py-24">
   <div class="max-w-6xl mx-auto px-5">
-    <div class="reveal text-center max-w-2xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-black">No contract. No joining fee.</h2>
-      <div class="mt-8 inline-flex glass rounded-full p-1" role="group" aria-label="Billing period">
-        <button id="mBtn" class="px-6 py-2 rounded-full font-bold bg-lime text-void" aria-pressed="true">Monthly</button>
-        <button id="aBtn" class="px-6 py-2 rounded-full font-bold text-mist" aria-pressed="false">Annual</button>
-      </div>
+    <div class="reveal max-w-2xl">
+      <h2 id="contactHeading" class="text-4xl md:text-5xl font-black">CONTACT US</h2>
     </div>
-    <div class="mt-12 grid md:grid-cols-3 gap-6 items-stretch">
-      <div class="reveal glass rounded-3xl p-8 flex flex-col">
-        <h3 class="text-2xl font-extrabold">Basic</h3>
-        <p class="mt-4"><span class="price head text-5xl font-black" data-m="450" data-a="4500">R450</span><span class="per text-mist"> / month</span></p>
+    <div class="mt-10 grid lg:grid-cols-2 gap-8">
+      <div class="space-y-6">
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-xl font-extrabold mb-3">The Fitness Factory (Northwood)</h3>
+          <p id="northwoodAddr" class="text-mist whitespace-pre-line">Northwood School
+140 Adelaide Tambo Drive,
+Durban North 4051</p>
+        </div>
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-xl font-extrabold mb-3">The Fitness Factory (Underberg)</h3>
+          <p id="underbergAddr" class="text-mist whitespace-pre-line">9 Old Main Road, Underberg, R617</p>
+        </div>
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-xl font-extrabold mb-4">Get in touch</h3>
+          <p class="text-mist">Tel: <span id="contactPhone">+27 84 420 8230</span></p>
+          <p class="text-mist mt-2">Email: <a id="contactEmail" href="mailto:info@thefitnessfactory.co.za" class="hover:text-lime">info@thefitnessfactory.co.za</a></p>
+          <div class="mt-6 flex gap-4">
+            <a id="contactFb" href="#" target="_blank" class="glass px-4 py-2 rounded-full hover:bg-white/10">Facebook</a>
+            <a id="contactIg" href="#" target="_blank" class="glass px-4 py-2 rounded-full hover:bg-white/10">Instagram</a>
+          </div>
+        </div>
       </div>
-      <div class="reveal relative rounded-3xl p-8 flex flex-col bg-lime text-void md:-my-4">
-        <h3 class="text-2xl font-extrabold">Pro</h3>
-        <p class="mt-4"><span class="price head text-5xl font-black" data-m="650" data-a="6500">R650</span><span class="per opacity-70"> / month</span></p>
-      </div>
-      <div class="reveal glass rounded-3xl p-8 flex flex-col">
-        <h3 class="text-2xl font-extrabold">Elite</h3>
-        <p class="mt-4"><span class="price head text-5xl font-black" data-m="1200" data-a="12000">R1 200</span><span class="per text-mist"> / month</span></p>
+      <div class="glass rounded-3xl p-8">
+        <h3 class="text-xl font-extrabold mb-6">OPENING HOURS (NORTHWOOD)</h3>
+        <div id="hoursList" class="space-y-3">
+          <!-- populated by JS -->
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- JOIN -->
-<section id="join" class="relative bg-coal py-24">
+<section id="join" class="relative py-24">
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="text-4xl md:text-5xl font-black">Claim your free pass</h2>
     <form name="free-pass" method="POST" data-netlify="true" class="mt-8 glass rounded-3xl p-6 space-y-4 max-w-lg">
+      <input type="hidden" name="form-name" value="free-pass">
       <div><label for="name" class="block text-sm font-semibold mb-1.5">Full name</label><input id="name" name="name" required class="w-full rounded-xl bg-void border border-white/15 px-4 py-3"></div>
       <div><label for="email" class="block text-sm font-semibold mb-1.5">Email</label><input id="email" name="email" type="email" required class="w-full rounded-xl bg-void border border-white/15 px-4 py-3"></div>
       <button class="w-full bg-lime text-void font-bold py-3.5 rounded-full">Send request</button>
@@ -159,7 +247,8 @@ tailwind.config = { theme: { extend: {
 </main>
 
 <footer class="bg-void border-t border-white/10 text-mist text-sm py-8 text-center">
-  <p>&copy; <span id="yr">2026</span> The Fitness Factory @Northwood</p>
+  <p>&copy; <span id="yr">2026</span> <span id="footerName">The Fitness Factory @Northwood</span></p>
+  <p class="mt-2">Website powered by Sprout Consulting</p>
 </footer>
 
 <dialog id="bookDlg" class="glass bg-coal text-white rounded-3xl p-8 max-w-sm w-[90%] m-auto">
@@ -168,37 +257,156 @@ tailwind.config = { theme: { extend: {
   <div class="mt-6 flex gap-3"><a href="#join" id="dlgGo" class="flex-1 text-center bg-lime text-void font-bold py-3 rounded-full">Request free pass</a><button id="dlgClose" class="px-5 py-3 rounded-full border border-white/30 font-bold">Close</button></div>
 </dialog>
 
-<!-- SCRIPT THAT LOADS CONTENT FROM content.json -->
 <script>
   let trainers = [];
   let sessions = [];
+  let contentData = {};
 
   async function loadContent() {
     try {
       const res = await fetch('content.json');
       if (res.ok) {
-        const data = await res.json();
-        trainers = data.trainers || [];
-        sessions = data.sessions || [];
+        contentData = await res.json();
+        trainers = contentData.trainers || [];
+        sessions = contentData.sessions || [];
       }
     } catch (e) {
+      contentData = {};
       trainers = [
         { name: 'Simon Vickers', role: 'Co-owner and trainer', tags: ['Strength','Coaching'], c: '#C6FF3D' },
         { name: 'Richard Tyler', role: 'Co-owner, Athletic Performance', tags: ['Performance'], c: '#9BE15D' }
       ];
       sessions = [
         { d:'Mon', t:'05:30', n:'Strength & Conditioning', who:'Simon Vickers' },
-        { d:'Tue', t:'06:00', n:'Climbing Wall', who:'Richard Tyler' }
+        { d:'Tue', t:'06:00', n:'Climbing Wall Session', who:'Richard Tyler' }
       ];
     }
+    populateContent();
     initApp();
+  }
+
+  function populateContent() {
+    // Nav & Footer
+    if (contentData.gym_name) {
+      document.getElementById('navGymName').textContent = contentData.gym_name.toUpperCase().replace('@', ' @');
+      document.getElementById('footerName').textContent = contentData.gym_name;
+    }
+    
+    // Hero
+    if (contentData.hero) {
+      if (contentData.hero.subtitle) document.getElementById('heroSubtitle').textContent = contentData.hero.subtitle;
+      if (contentData.hero.heading_line1) document.getElementById('heroLine1').textContent = contentData.hero.heading_line1;
+      if (contentData.hero.heading_line2) document.getElementById('heroLine2').textContent = contentData.hero.heading_line2;
+      if (contentData.hero.heading_line3) document.getElementById('heroLine3').textContent = contentData.hero.heading_line3;
+      if (contentData.hero.description) document.getElementById('heroDesc').textContent = contentData.hero.description;
+      if (contentData.hero.cta1_text) document.getElementById('heroCta1').textContent = contentData.hero.cta1_text;
+      if (contentData.hero.cta2_text) document.getElementById('heroCta2').textContent = contentData.hero.cta2_text;
+    }
+    
+    // About
+    if (contentData.about) {
+      if (contentData.about.heading) document.getElementById('aboutHeading').textContent = contentData.about.heading;
+      const aboutBody = document.getElementById('aboutBody');
+      if (contentData.about.body && Array.isArray(contentData.about.body)) {
+        aboutBody.innerHTML = contentData.about.body.map(p => `<p>${p}</p>`).join('');
+      }
+    }
+    
+    // Underberg
+    if (contentData.underberg) {
+      if (contentData.underberg.heading) document.getElementById('underbergHeading').textContent = contentData.underberg.heading;
+      if (contentData.underberg.description) document.getElementById('underbergDesc').textContent = contentData.underberg.description;
+      const ubBtn = document.getElementById('underbergBtn');
+      if (contentData.underberg.button_text) ubBtn.textContent = contentData.underberg.button_text;
+      if (contentData.underberg.button_link) ubBtn.href = contentData.underberg.button_link;
+    }
+    
+    // Fees
+    if (contentData.fees) {
+      if (contentData.fees.heading) document.getElementById('feesHeading').textContent = contentData.fees.heading;
+      if (contentData.fees.subheading) document.getElementById('feesSubheading').textContent = contentData.fees.subheading;
+      if (contentData.fees.note) document.getElementById('feesNote').textContent = contentData.fees.note;
+      const formLink = document.getElementById('feesFormLink');
+      if (contentData.fees.membership_form_text) formLink.textContent = contentData.fees.membership_form_text;
+      if (contentData.fees.membership_form_link) formLink.href = contentData.fees.membership_form_link;
+      
+      const pricingGrid = document.getElementById('pricingGrid');
+      if (contentData.fees.plans && Array.isArray(contentData.fees.plans)) {
+        pricingGrid.innerHTML = contentData.fees.plans.map(plan => {
+          const isFeatured = plan.featured ? true : false;
+          return `
+            <div class="reveal ${isFeatured ? 'relative rounded-3xl p-8 flex flex-col bg-lime text-void md:-my-4' : 'glass rounded-3xl p-8 flex flex-col'}">
+              ${isFeatured ? '<span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-void text-lime px-4 py-1 rounded-full text-sm font-bold">POPULAR</span>' : ''}
+              <h3 class="text-2xl font-extrabold">${plan.name || ''}</h3>
+              <p class="mt-4"><span class="price head text-5xl font-black" data-m="${plan.monthly || 0}" data-a="${plan.annual || 0}">R${plan.monthly || 0}</span><span class="per ${isFeatured ? 'opacity-70' : 'text-mist'}"> / month</span></p>
+              <ul class="mt-6 space-y-2 flex-1 ${isFeatured ? 'text-void/80' : 'text-mist'}">
+                ${(plan.features || []).map(f => `<li>• ${f}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+    
+    // Classes
+    if (contentData.classes) {
+      if (contentData.classes.heading) document.getElementById('classesHeading').textContent = contentData.classes.heading;
+      if (contentData.classes.intro) document.getElementById('classesIntro').textContent = contentData.classes.intro;
+      if (contentData.classes.note) document.getElementById('classesNote').textContent = contentData.classes.note;
+      const dn = document.getElementById('dnorthPdf');
+      const ub = document.getElementById('underbergPdf');
+      const ind = document.getElementById('indemnityLink');
+      if (contentData.classes.durban_north_text) dn.textContent = contentData.classes.durban_north_text;
+      if (contentData.classes.durban_north_pdf) dn.href = contentData.classes.durban_north_pdf;
+      if (contentData.classes.underberg_text) ub.textContent = contentData.classes.underberg_text;
+      if (contentData.classes.underberg_pdf) ub.href = contentData.classes.underberg_pdf;
+      if (contentData.classes.indemnity_text) ind.textContent = contentData.classes.indemnity_text;
+      if (contentData.classes.indemnity_link) ind.href = contentData.classes.indemnity_link;
+    }
+    
+    // Gallery
+    if (contentData.gallery) {
+      if (contentData.gallery.heading) document.getElementById('galleryHeading').textContent = contentData.gallery.heading;
+      const galleryGrid = document.getElementById('galleryGrid');
+      if (contentData.gallery.images && Array.isArray(contentData.gallery.images)) {
+        galleryGrid.innerHTML = contentData.gallery.images.map(img => `
+          <div class="reveal overflow-hidden rounded-2xl aspect-square">
+            <img src="${img.url}" alt="${img.alt || 'Gym photo'}" class="w-full h-full object-cover zoom">
+          </div>
+        `).join('');
+      }
+    }
+    
+    // Contact
+    if (contentData.contact) {
+      if (contentData.contact.heading) document.getElementById('contactHeading').textContent = contentData.contact.heading;
+      if (contentData.contact.northwood_address) document.getElementById('northwoodAddr').textContent = contentData.contact.northwood_address;
+      if (contentData.contact.underberg_address) document.getElementById('underbergAddr').textContent = contentData.contact.underberg_address;
+      if (contentData.contact.phone) document.getElementById('contactPhone').textContent = contentData.contact.phone;
+      const email = document.getElementById('contactEmail');
+      if (contentData.contact.email) { email.textContent = contentData.contact.email; email.href = 'mailto:' + contentData.contact.email; }
+      const fb = document.getElementById('contactFb');
+      const ig = document.getElementById('contactIg');
+      if (contentData.contact.facebook) fb.href = contentData.contact.facebook;
+      if (contentData.contact.instagram) ig.href = contentData.contact.instagram;
+      
+      const hoursList = document.getElementById('hoursList');
+      if (contentData.contact.hours && Array.isArray(contentData.contact.hours)) {
+        hoursList.innerHTML = contentData.contact.hours.map(h => `
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span class="text-mist">${h.days}</span>
+            <span class="font-semibold">${h.time}</span>
+          </div>
+        `).join('');
+      }
+    }
   }
 
   function initApp() {
     const initials = n => n.split(' ').filter(w => /^[A-Z]/.test(w)).map(w => w[0]).slice(0,2).join('');
     document.getElementById('trainerGrid').innerHTML = trainers.map(t => `
       <li class="card reveal glass rounded-3xl p-6">
-        <div class="w-16 h-16 rounded-2xl grid place-items-center head font-black text-xl text-void" style="background:${t.c}">${initials(t.name)}</div>
+        <div class="w-16 h-16 rounded-2xl grid place-items-center head font-black text-xl text-void" style="background:${t.c || '#C6FF3D'}">${initials(t.name)}</div>
         <h3 class="mt-4 text-lg font-extrabold">${t.name}</h3>
         <p class="text-mist text-sm mt-1">${t.role}</p>
       </li>`).join('');
@@ -209,6 +417,9 @@ tailwind.config = { theme: { extend: {
 
     drawDays();
     drawSessions();
+    setupBilling();
+    setupMobileMenu();
+    setupReveal();
   }
 
   let day = 'all', who = 'all';
@@ -240,14 +451,46 @@ tailwind.config = { theme: { extend: {
   document.getElementById('dlgClose').onclick = () => dlg.close();
   document.getElementById('dlgGo').onclick = () => dlg.close();
 
-  function setBilling(annual) {
-    document.querySelectorAll('.price').forEach(p => p.textContent = 'R' + (annual ? p.dataset.a : p.dataset.m));
-    document.querySelectorAll('.per').forEach(p => p.textContent = annual ? ' / year' : ' / month');
-    mBtn.className = 'px-6 py-2 rounded-full font-bold ' + (annual ? 'text-mist' : 'bg-lime text-void');
-    aBtn.className = 'px-6 py-2 rounded-full font-bold ' + (annual ? 'bg-lime text-void' : 'text-mist');
+  function setupBilling() {
+    function setBilling(annual) {
+      document.querySelectorAll('.price').forEach(p => {
+        const val = annual ? p.dataset.a : p.dataset.m;
+        p.textContent = 'R' + val;
+      });
+      document.querySelectorAll('.per').forEach(p => p.textContent = annual ? ' / year' : ' / month');
+      mBtn.className = 'px-6 py-2 rounded-full font-bold ' + (annual ? 'text-mist' : 'bg-lime text-void');
+      aBtn.className = 'px-6 py-2 rounded-full font-bold ' + (annual ? 'bg-lime text-void' : 'text-mist');
+      mBtn.setAttribute('aria-pressed', annual ? 'false' : 'true');
+      aBtn.setAttribute('aria-pressed', annual ? 'true' : 'false');
+    }
+    const mBtn = document.getElementById('mBtn'), aBtn = document.getElementById('aBtn');
+    mBtn.onclick = () => setBilling(false); 
+    aBtn.onclick = () => setBilling(true);
   }
-  const mBtn = document.getElementById('mBtn'), aBtn = document.getElementById('aBtn');
-  mBtn.onclick = () => setBilling(false); aBtn.onclick = () => setBilling(true);
+
+  function setupMobileMenu() {
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+  }
+
+  function setupReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
 
   document.getElementById('yr').textContent = new Date().getFullYear();
   if (location.search.includes('thanks=1')) document.getElementById('thanks').classList.remove('hidden');
