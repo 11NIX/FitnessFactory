@@ -7,28 +7,129 @@ public_folder: "/images/uploads"
 
 collections:
   - name: "site_content"
-    label: "Site Content"
+    label: "Gym Content"
     files:
       - name: "content"
-        label: "Trainers & Timetable"
+        label: "All Website Content"
         file: "content.json"
+        format: "json"
         fields:
           - {label: "Gym Name", name: "gym_name", widget: "string"}
+          
+          - label: "Hero Section (top of page)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Subtitle (small text above heading)", name: "subtitle", widget: "string"}
+              - {label: "Heading Line 1", name: "heading_line1", widget: "string"}
+              - {label: "Heading Line 2", name: "heading_line2", widget: "string"}
+              - {label: "Heading Line 3 (shown in green)", name: "heading_line3", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Button 1 Text", name: "cta1_text", widget: "string"}
+              - {label: "Button 2 Text", name: "cta2_text", widget: "string"}
+          
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Paragraphs"
+                name: "body"
+                widget: "list"
+                field: {label: "Paragraph", name: "paragraph", widget: "text"}
+          
+          - label: "Underberg Section"
+            name: "underberg"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Button Text", name: "button_text", widget: "string"}
+              - {label: "Button Link (URL or #section)", name: "button_link", widget: "string"}
+          
+          - label: "Fees & Sign Up"
+            name: "fees"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subheading", name: "subheading", widget: "string"}
+              - {label: "Note", name: "note", widget: "text"}
+              - {label: "Membership Form Button Text", name: "membership_form_text", widget: "string"}
+              - {label: "Membership Form Link (URL)", name: "membership_form_link", widget: "string"}
+              - label: "Pricing Plans"
+                name: "plans"
+                widget: "list"
+                fields:
+                  - {label: "Plan Name", name: "name", widget: "string"}
+                  - {label: "Monthly Price (Rand, numbers only)", name: "monthly", widget: "number"}
+                  - {label: "Annual Price (Rand, numbers only)", name: "annual", widget: "number"}
+                  - label: "What's Included"
+                    name: "features"
+                    widget: "list"
+                    field: {label: "Feature", name: "feature", widget: "string"}
+                  - {label: "Highlight as POPULAR", name: "featured", widget: "boolean", default: false}
+          
+          - label: "Group Classes"
+            name: "classes"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Intro Text", name: "intro", widget: "text"}
+              - {label: "Note", name: "note", widget: "text"}
+              - {label: "Durban North Button Text", name: "durban_north_text", widget: "string"}
+              - {label: "Durban North Timetable Link", name: "durban_north_pdf", widget: "string"}
+              - {label: "Underberg Button Text", name: "underberg_text", widget: "string"}
+              - {label: "Underberg Timetable Link", name: "underberg_pdf", widget: "string"}
+              - {label: "Indemnity Form Text", name: "indemnity_text", widget: "string"}
+              - {label: "Indemnity Form Link", name: "indemnity_link", widget: "string"}
+          
+          - label: "Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                fields:
+                  - {label: "Photo", name: "url", widget: "image"}
+                  - {label: "Description (for accessibility)", name: "alt", widget: "string"}
+          
+          - label: "Contact Details"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Northwood Address", name: "northwood_address", widget: "text"}
+              - {label: "Underberg Address", name: "underberg_address", widget: "text"}
+              - {label: "Phone Number", name: "phone", widget: "string"}
+              - {label: "Email Address", name: "email", widget: "string"}
+              - {label: "Facebook URL", name: "facebook", widget: "string"}
+              - {label: "Instagram URL", name: "instagram", widget: "string"}
+              - label: "Opening Hours"
+                name: "hours"
+                widget: "list"
+                fields:
+                  - {label: "Days", name: "days", widget: "string"}
+                  - {label: "Time", name: "time", widget: "string"}
+          
           - label: "Trainers"
             name: "trainers"
             widget: "list"
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Role", name: "role", widget: "string"}
-              - {label: "Color Code (Hex)", name: "c", widget: "string", default: "#C6FF3D"}
-              - label: "Tags"
+              - {label: "Card Colour (hex like #C6FF3D)", name: "c", widget: "string", default: "#C6FF3D"}
+              - label: "Tags/Specialities"
                 name: "tags"
                 widget: "list"
-          - label: "Sessions"
+                field: {label: "Tag", name: "tag", widget: "string"}
+          
+          - label: "Weekly Timetable"
             name: "sessions"
             widget: "list"
             fields:
               - {label: "Day (Mon, Tue, Wed, Thu, Fri, Sat)", name: "d", widget: "string"}
               - {label: "Time (e.g. 05:30)", name: "t", widget: "string"}
               - {label: "Session Name", name: "n", widget: "string"}
-              - {label: "Trainer Name", name: "who", widget: "string"}
+              - {label: "Trainer Name (must match a trainer's name exactly)", name: "who", widget: "string"}
