@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site_content"
+    label: "Site Content"
+    files:
+      - name: "content"
+        label: "Trainers & Timetable"
+        file: "content.json"
+        fields:
+          - {label: "Gym Name", name: "gym_name", widget: "string"}
+          - label: "Trainers"
+            name: "trainers"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Color Code (Hex)", name: "c", widget: "string", default: "#C6FF3D"}
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+          - label: "Sessions"
+            name: "sessions"
+            widget: "list"
+            fields:
+              - {label: "Day (Mon, Tue, Wed, Thu, Fri, Sat)", name: "d", widget: "string"}
+              - {label: "Time (e.g. 05:30)", name: "t", widget: "string"}
+              - {label: "Session Name", name: "n", widget: "string"}
+              - {label: "Trainer Name", name: "who", widget: "string"}

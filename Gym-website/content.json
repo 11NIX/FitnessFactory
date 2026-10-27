@@ -1,0 +1,26 @@
+{
+  "gym_name": "The Fitness Factory @Northwood",
+  "trainers": [
+    { "name": "Simon Vickers", "role": "Co-owner and trainer", "tags": ["Strength", "Coaching"], "c": "#C6FF3D" },
+    { "name": "Richard Tyler", "role": "Co-owner, Athletic Performance Consultant", "tags": ["Performance", "Athletes"], "c": "#9BE15D" },
+    { "name": "Claudia Cummins", "role": "Biokineticist", "tags": ["Rehab", "Recovery"], "c": "#6EE7B7" },
+    { "name": "Cameron Smith", "role": "Trainer", "tags": ["Functional"], "c": "#C6FF3D" },
+    { "name": "Nikita Van der Merwe", "role": "Trainer", "tags": ["Conditioning"], "c": "#9BE15D" },
+    { "name": "Daniel van Deventer", "role": "Trainer", "tags": ["Strength"], "c": "#6EE7B7" },
+    { "name": "Leigh Vickers", "role": "Trainer, admin and social media", "tags": ["Coaching"], "c": "#C6FF3D" }
+  ],
+  "sessions": [
+    { "d": "Mon", "t": "05:30", "n": "Strength & Conditioning", "who": "Simon Vickers" },
+    { "d": "Mon", "t": "17:30", "n": "Functional Training", "who": "Cameron Smith" },
+    { "d": "Tue", "t": "06:00", "n": "Climbing Wall Session", "who": "Daniel van Deventer" },
+    { "d": "Tue", "t": "17:30", "n": "Strength & Conditioning", "who": "Nikita Van der Merwe" },
+    { "d": "Wed", "t": "05:30", "n": "Functional Training", "who": "Cameron Smith" },
+    { "d": "Wed", "t": "16:30", "n": "Rehab & Performance", "who": "Claudia Cummins" },
+    { "d": "Thu", "t": "06:00", "n": "Strength & Conditioning", "who": "Simon Vickers" },
+    { "d": "Thu", "t": "17:30", "n": "Climbing Wall Session", "who": "Daniel van Deventer" },
+    { "d": "Fri", "t": "05:30", "n": "Functional Training", "who": "Nikita Van der Merwe" },
+    { "d": "Fri", "t": "16:00", "n": "Performance Group", "who": "Richard Tyler" },
+    { "d": "Sat", "t": "07:00", "n": "Weekend Strength", "who": "Simon Vickers" },
+    { "d": "Sat", "t": "09:00", "n": "Functional Training", "who": "Cameron Smith" }
+  ]
+}
