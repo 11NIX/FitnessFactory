@@ -1,0 +1,242 @@
+# Pages CMS configuration for The Fitness Factory website
+# This controls what the owner can edit at https://pagescms.org
+
+media:
+  - name: uploads
+    label: Pictures & Documents
+    input: Gym-website/images/uploads
+    output: /images/uploads
+    categories: [image, document]
+
+content:
+  - name: site-content
+    label: Gym Content
+    type: file
+    path: Gym-website/content.json
+    format: json
+    fields:
+      - name: gym_name
+        label: Gym Name
+        type: string
+        
+      - name: hero
+        label: Hero Section (top of page)
+        type: object
+        fields:
+          - name: subtitle
+            label: Subtitle (small text above heading)
+            type: string
+          - name: heading_line1
+            label: Heading Line 1
+            type: string
+          - name: heading_line2
+            label: Heading Line 2
+            type: string
+          - name: heading_line3
+            label: Heading Line 3 (shown in green)
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: cta1_text
+            label: Button 1 Text
+            type: string
+          - name: cta2_text
+            label: Button 2 Text
+            type: string
+
+      - name: about
+        label: About Section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: body
+            label: Paragraphs
+            type: text
+            list: true
+
+      - name: underberg
+        label: Underberg Section
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: button_text
+            label: Button Text
+            type: string
+          - name: button_link
+            label: Button Link (URL or #section)
+            type: string
+
+      - name: fees
+        label: Fees & Sign Up
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: subheading
+            label: Subheading
+            type: string
+          - name: note
+            label: Note (small text under subheading)
+            type: text
+          - name: membership_form_text
+            label: Membership Form Button Text
+            type: string
+          - name: membership_form_link
+            label: Membership Form Link (URL)
+            type: string
+          - name: plans
+            label: Pricing Plans
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Plan Name (e.g. Basic, Pro, Elite)
+                type: string
+              - name: monthly
+                label: Monthly Price (Rand, numbers only)
+                type: number
+              - name: annual
+                label: Annual Price (Rand, numbers only)
+                type: number
+              - name: features
+                label: What's Included
+                type: string
+                list: true
+              - name: featured
+                label: Highlight as POPULAR
+                type: boolean
+                default: false
+
+      - name: classes
+        label: Group Classes
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: intro
+            label: Intro Text
+            type: text
+          - name: note
+            label: Note (members vs classes info)
+            type: text
+          - name: durban_north_text
+            label: Durban North Button Text
+            type: string
+          - name: durban_north_pdf
+            label: Durban North Timetable (URL or file path)
+            type: string
+          - name: underberg_text
+            label: Underberg Button Text
+            type: string
+          - name: underberg_pdf
+            label: Underberg Timetable (URL or file path)
+            type: string
+          - name: indemnity_text
+            label: Indemnity Form Text
+            type: string
+          - name: indemnity_link
+            label: Indemnity Form Link (URL)
+            type: string
+
+      - name: gallery
+        label: Gallery
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: images
+            label: Photos
+            type: object
+            list: true
+            fields:
+              - name: url
+                label: Photo
+                type: image
+              - name: alt
+                label: Description (for accessibility)
+                type: string
+
+      - name: contact
+        label: Contact Details
+        type: object
+        fields:
+          - name: heading
+            label: Heading
+            type: string
+          - name: northwood_address
+            label: Northwood Address
+            type: text
+          - name: underberg_address
+            label: Underberg Address
+            type: text
+          - name: phone
+            label: Phone Number
+            type: string
+          - name: email
+            label: Email Address
+            type: string
+          - name: facebook
+            label: Facebook URL
+            type: string
+          - name: instagram
+            label: Instagram URL
+            type: string
+          - name: hours
+            label: Opening Hours
+            type: object
+            list: true
+            fields:
+              - name: days
+                label: Days (e.g. Monday - Thursday)
+                type: string
+              - name: time
+                label: Time (e.g. 5am - 8pm)
+                type: string
+
+      - name: trainers
+        label: Trainers
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: role
+            label: Role (e.g. Co-owner and trainer)
+            type: string
+          - name: c
+            label: Card Colour (hex code like #C6FF3D)
+            type: string
+          - name: tags
+            label: Tags/Specialities
+            type: string
+            list: true
+
+      - name: sessions
+        label: Weekly Timetable
+        type: object
+        list: true
+        fields:
+          - name: d
+            label: Day (Mon, Tue, Wed, Thu, Fri, Sat)
+            type: string
+          - name: t
+            label: Time (e.g. 05:30)
+            type: string
+          - name: n
+            label: Session Name
+            type: string
+          - name: who
+            label: Trainer (must match a trainer's name exactly)
+            type: string
